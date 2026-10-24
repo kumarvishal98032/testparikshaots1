@@ -1,1 +1,247 @@
+/* ==========================================
+   PARIKSHA SCIENTIFIC CALCULATOR
+   Version 1.0
+========================================== */
 
+/* Floating Button */
+
+#calculatorBtn{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:70px;
+
+    height:70px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#0b5ed7;
+
+    color:white;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    transition:.25s;
+
+    z-index:99999;
+
+}
+
+#calculatorBtn:hover{
+
+    transform:scale(1.08);
+
+    background:#0948a3;
+
+}
+
+/* Calculator Window */
+
+#calculatorWindow{
+
+    position:fixed;
+
+    width:380px;
+
+    height:580px;
+
+    right:20px;
+
+    bottom:90px;
+
+    background:white;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    display:none;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.30);
+
+    z-index:99999;
+}
+
+/* Header */
+
+#calculatorHeader{
+
+    height:50px;
+
+    background:#0b3d91;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 15px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:move;
+
+    user-select:none;
+
+}
+
+/* Close Button */
+
+#closeCalculator{
+
+    width:38px;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#dc3545;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+#closeCalculator:hover{
+
+    background:#b02a37;
+
+}
+
+/* Calculator Body */
+
+#calculatorBody{
+
+    padding:15px;
+
+    background:#edf2f8;
+
+    height:calc(100% - 60px);
+
+    box-sizing:border-box;
+
+}
+
+/* Display */
+
+#calcDisplay{
+
+    width:100%;
+
+    height:65px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    background:white;
+
+    font-size:28px;
+
+    text-align:right;
+
+    padding:15px;
+
+    box-sizing:border-box;
+
+    margin-bottom:12px;
+
+    font-weight:bold;
+
+    color:#222;
+
+}
+
+/* Button Grid */
+
+#calcButtons{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:7px;
+
+}
+
+/* Default Button */
+
+.calcBtn{
+
+    height:46px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+    box-shadow:0 2px 5px rgba(0,0,0,.08);
+
+}
+
+.calcBtn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 5px 12px rgba(0,0,0,.15);
+
+}
+
+/* Scientific Buttons */
+
+.scientific{
+
+    background:#eef2f7;
+
+}
+
+/* Operator Buttons */
+
+.operator{
+
+    background:#0b5ed7;
+
+    color:white;
+
+}
+
+/* Danger Buttons */
+
+.danger{
+
+    background:#dc3545;
+
+    color:white;
+
+}
