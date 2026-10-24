@@ -10,7 +10,7 @@ let writtenAnswers = [];
 let studentName = "";
 let examSettings = {};
 
-const API_URL = "https://script.google.com/macros/s/AKfycbwYxb_76YCNwI--aE1FD5mxrJbNoObZSSVt6UdkX9ZXKWw6hdN4WUpElhQ5vi_HmJD6/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbzPhE4hVLibRIihYeuPY1XXqUdjML_Puc6pxNHq-JybZC4lGBYsqhgRPjln6EHJJQX1jw/exec";
 
 
 // =======================
