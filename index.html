@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pariksha OTS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ========================= -->
+<!-- WELCOME PAGE -->
+<!-- ========================= -->
+
+<div id="welcomePage">
+
+    <div class="welcome-box">
+
+        <img src="logo.png" class="welcome-logo">
+
+        <h1>PARIKSHA</h1>
+
+        <p>Online Examination Platform</p>
+
+        <br>
+
+        <label>
+            <b>Candidate Name</b>
+        </label>
+
+        <br><br>
+
+        <input
+            type="text"
+            id="loginName"
+            placeholder="Enter your full name">
+
+        <br><br>
+
+
+
+        <label>
+        <b>Test ID</b>
+        </label>
+
+        <br><br>
+
+        <input
+            type="text"
+            id="loginTestID"
+            placeholder="Enter Test ID">
+
+        <br><br>
+        
+        
+        <button id="startBtn" onclick="showInstructions()">
+
+            START TEST
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- INSTRUCTIONS PAGE -->
+<!-- ========================= -->
+
+<div id="instructionPage" style="display:none;">
+
+    <div class="instruction-box">
+
+        <h1>Instructions</h1>
+
+        <hr>
+
+        <p><b>Test Name :</b> <span id="instructionTestName">Loading...</span></p>
+
+        <p><b>Duration :</b> <span id="instructionDuration">Loading...</span> Minutes</p>
+
+        <p><b>Subject :</b> <span id="instructionSubject">Loading...</span></p>
+
+        <p><b>Calculator :</b> <span id="instructionCalculator">Loading...</span></p>
+
+        <hr>
+
+        <h3>Please read carefully</h3>
+
+        <ul style="text-align:left;line-height:1.8;">
+
+            <li>Do not refresh the browser during the examination.</li>
+
+            <li>Do not close the browser window.</li>
+
+            <li>Timer starts only after clicking Begin Exam.</li>
+
+            <li>Submit the test before the timer expires.</li>
+
+            <li>Negative marking will be applicable if enabled.</li>
+
+        </ul>
+
+        <br>
+
+        <button id="beginExamBtn" onclick="startExam()">
+
+            BEGIN EXAM
+
+        </button>
+
+    </div>
+
+</div>
+    
+
+
+<div id="examPage" style="display:none;">
+    <div class="header">
+      <div class="logo-section">
+
+        <img src="logo.png" class="logo">
+
+        <div>
+
+            <h1>PARIKSHA</h1>
+
+            <p>Online Examination Platform</p>
+
+        </div>
+
+    </div>
+
+    <div class="timer-section">
+
+        <div class="timer-title">
+            Time Left
+        </div>
+
+        <div id="timer">
+            40:00
+        </div>
+
+    </div>
+
+</div>
+
+<div class="info-bar">
+
+    <span>
+         Candidate Name :
+        <b id="studentDisplay">--</b>
+    </span>
+
+
+    <span>
+    Test :
+    <b id="testName">Loading...</b>
+</span>
+
+<span>
+    Subject :
+    <b id="subjectName">Loading...</b>
+</span>
+
+    <span>
+         Date :
+        <span id="examDate"></span>
+    </span>
+
+</div>
+
+    
+    <div id="studentWatermark"></div>
+  
+<div style="
+background:#fdecea;
+color:#b71c1c;
+padding:12px;
+text-align:center;
+font-weight:bold;
+font-size:16px;
+border-bottom:2px solid #f44336;">
+⚠️ IMPORTANT: Do not refresh the page, press Back, or close the browser during the test. Your responses may be lost.
+</div>
+    
+    <div class="container">
+
+        <!-- LEFT PANEL -->
+        <div class="left">
+            
+             
+
+            <h3 id="qno"></h3>
+
+            <p id="question"></p>
+
+            <div id="options"></div>
+
+            <br>
+
+            <!-- ADDED FOR ANSWER BOX  -->
+            <label><b>Answer Workspace (Optional)</b></label>
+
+            <br><br>
+
+            <textarea
+                id="answerWorkspace"
+                placeholder="Write your answer, calculation or reasoning here..."
+                rows="6">
+            </textarea>
+
+            <br><br>
+            
+            
+             <!-- ADDED FOR ANSWER BOX  -->
+<div class="button-bar">
+
+    <button class="btn btn-prev" onclick="prevQ()">
+        ⬅ Previous
+    </button>
+
+    <button class="btn btn-clear" onclick="clearResponse()">
+        Clear Response
+    </button>
+
+    <button class="btn btn-next" onclick="nextQ()">
+        Save & Next ➜
+    </button>
+
+    <button class="btn btn-submit" onclick="submitTest()">
+        Submit Test
+    </button>
+
+</div>
+
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="right">
+
+            <h3>Question Palette</h3>
+
+            <div id="palette"></div>
+
+            <hr>
+
+            <p>
+                🟩 Answered
+            </p>
+
+            <p>
+                ⬜ Not Answered
+            </p>
+
+        </div>
+
+    </div>
+
+<!-- ===========================
+     PARIKSHA SCIENTIFIC CALCULATOR
+=========================== -->
+
+<button id="calculatorBtn">🧮</button>
+
+<div id="calculatorWindow">
+
+    <div id="calculatorHeader">
+
+        <span>PARIKSHA Scientific Calculator</span>
+
+        <button id="closeCalculator">✕</button>
+
+    </div>
+
+    <div id="calculatorBody">
+
+        <input
+            type="text"
+            id="calcDisplay"
+            value="0"
+            readonly>
+
+        <div id="calcButtons"></div>
+
+    </div>
+
+</div>
+
+</div>
+<link rel="stylesheet" href="calculator/calculator.css">
+</div>
+<script src="calculator/math.js"></script>
+
+<script src="calculator/calculator.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

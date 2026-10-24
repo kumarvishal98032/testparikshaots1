@@ -1,0 +1,485 @@
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f4f4;
+    margin:0;
+}
+
+.top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#0b5ed7;
+    color:white;
+    padding:15px;
+}
+
+.container{
+    display:flex;
+    flex-direction:row;
+}
+
+.left{
+    width:75%;
+    padding:20px;
+}
+
+.right{
+    width:25%;
+    background:white;
+    padding:20px;
+    min-height:700px;
+}
+
+button{
+    padding:10px 15px;
+    margin:5px;
+    cursor:pointer;
+}
+
+.palette-btn{
+    width:45px;
+    height:45px;
+    margin:4px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:14px;
+    background:#cccccc;
+    color:white;
+    font-weight:bold;
+}
+
+#studentName,
+#studentRoll{
+    width:300px;
+    padding:8px;
+    font-size:14px;
+}
+
+
+/* Disable text selection */
+
+body{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+#studentWatermark{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) rotate(-30deg);
+
+    font-size: 80px;
+    font-weight: bold;
+
+    color: rgba(0,0,0,0.10);
+
+    pointer-events: none;
+
+    z-index: 9999;
+    opacity: 0.4;
+    white-space: nowrap;
+}
+
+
+
+/* ===========================================
+   HEADER
+=========================================== */
+
+.header{
+
+    background:#0b3d91;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 30px;
+
+    box-shadow:0 3px 8px rgba(0,0,0,.15);
+
+}
+
+.logo-section{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.logo{
+
+    width:70px;
+
+    height:70px;
+
+    background:white;
+
+    border-radius:50%;
+
+    object-fit:contain;
+
+}
+
+.logo-section h1{
+
+    margin:0;
+
+    font-size:34px;
+
+    letter-spacing:1px;
+
+}
+
+.logo-section p{
+
+    margin:3px 0 0;
+
+    font-size:16px;
+
+    color:#e3e3e3;
+
+}
+
+.timer-section{
+
+    text-align:center;
+
+}
+
+.timer-title{
+
+    font-size:16px;
+
+}
+
+#timer{
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    color:#ffd54f;
+
+}
+
+/* ===========================================
+   INFORMATION BAR
+=========================================== */
+
+.info-bar{
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    padding:12px;
+
+    font-size:17px;
+
+    box-shadow:0 2px 5px rgba(0,0,0,.08);
+
+}
+
+
+/* ===========================
+   BUTTON BAR
+=========================== */
+
+.button-bar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin-top:30px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn{
+
+    flex:1;
+
+    min-width:170px;
+
+    padding:14px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:0.25s;
+
+    color:white;
+
+}
+
+/* Previous */
+
+.btn-prev{
+
+    background:#6c757d;
+
+}
+
+.btn-prev:hover{
+
+    background:#5a6268;
+
+    transform:translateY(-2px);
+
+}
+
+/* Clear */
+
+.btn-clear{
+
+    background:#ffc107;
+
+    color:black;
+
+}
+
+.btn-clear:hover{
+
+    background:#e0a800;
+
+    transform:translateY(-2px);
+
+}
+
+/* Save & Next */
+
+.btn-next{
+
+    background:#0d6efd;
+
+}
+
+.btn-next:hover{
+
+    background:#0b5ed7;
+
+    transform:translateY(-2px);
+
+}
+
+/* Submit */
+
+.btn-submit{
+
+    background:#dc3545;
+
+}
+
+.btn-submit:hover{
+
+    background:#bb2d3b;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+/* ================================= */
+/* WELCOME PAGE */
+/* ================================= */
+
+#welcomePage{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#f2f5fa;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+}
+
+.welcome-box{
+
+    width:420px;
+
+    background:#fff;
+
+    padding:40px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+
+}
+
+.welcome-logo{
+
+    width:90px;
+
+    margin-bottom:15px;
+
+}
+
+.welcome-box input{
+
+    width:100%;
+
+    padding:12px;
+
+    font-size:18px;
+
+    border-radius:8px;
+
+    border:1px solid #ccc;
+
+    box-sizing:border-box;
+
+}
+
+#startBtn{
+
+    width:100%;
+
+    padding:14px;
+
+    font-size:18px;
+
+    background:#1565C0;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+#startBtn:hover{
+
+    background:#0D47A1;
+
+}
+
+
+/* ================================= */
+/* INSTRUCTIONS PAGE */
+/* ================================= */
+
+#instructionPage{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#f2f5fa;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99998;
+
+}
+
+.instruction-box{
+
+    width:700px;
+
+    background:#fff;
+
+    padding:40px;
+
+    border-radius:12px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+
+}
+
+#beginExamBtn{
+
+    width:100%;
+
+    padding:15px;
+
+    font-size:18px;
+
+    background:#2E7D32;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+#beginExamBtn:hover{
+
+    background:#1B5E20;
+
+}
+
+
+
+#answerWorkspace{
+
+    width:100%;
+
+    min-height:140px;
+
+    padding:12px;
+
+    font-size:16px;
+
+    border:1px solid #bbb;
+
+    border-radius:8px;
+
+    resize:vertical;
+
+    box-sizing:border-box;
+
+    font-family:Arial,sans-serif;
+
+}
